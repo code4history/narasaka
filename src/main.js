@@ -61,9 +61,12 @@ async function main() {
     container.classList.add('transition');
     setTimeout(() => {
       container.classList.remove('transition');
-      setTimeout(() => {
+      let count = 0;
+      const intervalID = setInterval(() => {
         mymap.invalidateSize();
-      }, 100);
+        count += 1000;
+        if (count > 600) clearInterval(intervalID);
+      }, 500);
     }, 100);
     poi_content.innerHTML = "";
   }
@@ -79,13 +82,17 @@ async function main() {
     container.classList.add('transition');
     setTimeout(() => {
       container.classList.remove('transition');
-      mymap.invalidateSize();
-      console.log(layer);
-      if (layer.target instanceof L.Marker) {
-        mymap.panTo(layer.latlng);
-      } else {
-        mymap.panTo(layer.target.getBounds().getCenter());
-      }
+      let count = 0;
+      const intervalID = setInterval(() => {
+        mymap.invalidateSize();
+        if (layer.target instanceof L.Marker) {
+          mymap.panTo(layer.latlng);
+        } else {
+          mymap.panTo(layer.target.getBounds().getCenter());
+        }
+        count += 1000;
+        if (count > 600) clearInterval(intervalID);
+      }, 500);
     }, 100);
   };
 
