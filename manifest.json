@@ -4,9 +4,9 @@
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
-  "name": "奈良地蔵プロジェクト",
-  "description": "奈良市の道端の地蔵堂や小祠、石仏などをオープンデータ化するプロジェクト",
-  "short_name": "奈良地蔵",
+  "name": "デジタル奈良阪町史",
+  "description": "村田昌三氏の著書、『奈良阪町史』の内容を元に、トピックをデジタル化したもの",
+  "short_name": "奈良阪町",
   "icons": [
     {
       "src": "icons/manifest-icon-192.maskable.png",

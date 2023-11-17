@@ -13,14 +13,22 @@ iconTemplate = `
   {%- set iconUrl = "nyorai" -%}
 {%- elif type.match("道標") -%}
   {%- set iconUrl = "stone_display" -%}
+{%- elif type.match("神木") -%}
+  {%- set iconUrl = "tree" -%}
 {%- elif type.match("道") -%}
   {%- set iconUrl = "alley" -%}
 {%- elif type.match("神社") -%}
   {%- set iconUrl = "shrine" -%}
+{%- elif type.match("末社") -%}
+  {%- set iconUrl = "hokora" -%}
 {%- elif type.match("寺院") -%}
   {%- set iconUrl = "stone_tower" -%}
 {%- elif type.match("陵墓") -%}
   {%- set iconUrl = "stone" -%}
+{%- elif type.match("灯籠") -%}
+  {%- set iconUrl = "stone_lantern" -%}
+{%- elif type.match("石塔婆") -%}
+  {%- set iconUrl = "kuyohi" -%}
 {%- elif type.match("石塚") -%}
   {%- set iconUrl = "sekijin" -%}
 {%- elif type.match("橋") -%}

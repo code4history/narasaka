@@ -120,6 +120,7 @@ async function main() {
       polygon.html = feature.result.html;
       polygon.name = feature.properties.name;
       polygon.addEventListener("click", preparePoiPane);
+      polygon.bindTooltip(polygon.name, { permanent: true });
       polygon.addTo(mymap);
     }
   });
