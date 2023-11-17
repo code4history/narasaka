@@ -14,4 +14,8 @@ popupHtmlTemplate += `{% if image %}
   </qy-swiper>
 {% endif %}`;
 
+popupHtmlTemplate += `{% if description %}
+ <b>説明:</b> {{ description }} <br>
+{% endif %}`;
+
 popupHtmlTemplate += `</div>`;

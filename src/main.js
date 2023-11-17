@@ -61,7 +61,9 @@ async function main() {
     container.classList.add('transition');
     setTimeout(() => {
       container.classList.remove('transition');
-      mymap.invalidateSize();
+      setTimeout(() => {
+        mymap.invalidateSize();
+      }, 100);
     }, 100);
     poi_content.innerHTML = "";
   }
